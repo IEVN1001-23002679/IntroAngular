@@ -7,5 +7,15 @@ import { Component, signal } from '@angular/core';
   templateUrl: './app.html',
 })
 export class App {
-  protected readonly title = signal('IntroAngular');
+  title = "Juanito";
+
+  duplicaNumero(n1:number):number{
+    return n1*2
+  }
+
+  pelicula={
+    titulo: 'Eterno Resplandor de una mente con recuerdos',
+    fechaLanzamiento: new Date(),
+    precio:1234
+  }
 }

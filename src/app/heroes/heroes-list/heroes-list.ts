@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {IHeroes} from '../heroes'; 
+import { IHeroes } from '../heroes';
 
 @Component({
   selector: 'app-heroes-list',

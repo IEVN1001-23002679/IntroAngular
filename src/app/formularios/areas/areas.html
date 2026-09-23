@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-6">
+
+            <form>
+
+                <div class="form-group pt-4">
+                    <label for="num1">Medida 1:</label>
+
+                    <input
+                        [(ngModel)]="num1"
+                        name="num1"
+                        type="number"
+                        class="form-control"
+                        id="num1"
+                        placeholder="Ingrese un número"
+                    />
+                </div>
+
+
+                <div class="form-group pt-4" *ngIf="figura !== 'circulo'">
+                    <label for="num2">Medida 2:</label>
+
+                    <input
+                        [(ngModel)]="num2"
+                        name="num2"
+                        type="number"
+                        class="form-control"
+                        id="num2"
+                        placeholder="Ingrese un número"
+                    />
+                </div>
+
+
+                <div class="form-group pt-4">
+
+                    <label>Seleccione una figura:</label>
+
+                    <div>
+                        <input
+                            type="radio"
+                            id="triangulo"
+                            name="figura"
+                            value="triangulo"
+                            [(ngModel)]="figura"
+                        />
+
+                        <label for="triangulo">
+                            Triángulo
+                        </label>
+                    </div>
+
+
+                    <div>
+                        <input
+                            type="radio"
+                            id="rectangulo"
+                            name="figura"
+                            value="rectangulo"
+                            [(ngModel)]="figura"
+                        />
+
+                        <label for="rectangulo">
+                            Rectángulo
+                        </label>
+                    </div>
+
+
+                    <div>
+                        <input
+                            type="radio"
+                            id="circulo"
+                            name="figura"
+                            value="circulo"
+                            [(ngModel)]="figura"
+                        />
+
+                        <label for="circulo">
+                            Círculo
+                        </label>
+                    </div>
+
+
+                    <div>
+                        <input
+                            type="radio"
+                            id="pentagono"
+                            name="figura"
+                            value="pentagono"
+                            [(ngModel)]="figura"
+                        />
+
+                        <label for="pentagono">
+                            Pentágono
+                        </label>
+                    </div>
+
+                </div>
+
+
+                <br>
+
+                <button
+                    (click)="calcular()"
+                    type="button"
+                    class="btn btn-primary">
+
+                    calcular
+
+                </button>
+
+            </form>
+
+        </div>
+
+
+        <div class="col-6">
+
+            <h2>
+                El area es: {{area}}
+            </h2>
+
+        </div>
+
+    </div>
+
+</div>
+</body>
+</html>
